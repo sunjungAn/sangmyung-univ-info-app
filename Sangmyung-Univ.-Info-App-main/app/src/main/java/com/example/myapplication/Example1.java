@@ -11,7 +11,7 @@ public class Example1 extends AppCompatActivity{
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_example1);
             findViewById(R.id.login_button2).setOnClickListener(onClickListener);
             findViewById(R.id.resister_button).setOnClickListener(onClickListener);
             findViewById(R.id.logout_button).setOnClickListener(onClickListener);
@@ -23,21 +23,26 @@ public class Example1 extends AppCompatActivity{
         public void onClick(View v) { //클릭된 위젯의 id를 이용
             switch (v.getId()) {
                 case R.id.login_button2:
-                    //Login();
+                    startToast("로그인 되었습니다.");
                     break;
                 case R.id.resister_button:
-                    //startSignUpActivity();
+                    startSignupActivity();
                     break;
                 case R.id.logout_button:
                     //SignOut();
             }
         }
     };
+
     private void startToast(String msg){
         Toast.makeText(this,msg, Toast.LENGTH_SHORT).show();
     }
-    private void startSignUpActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
+    public void startSignupActivity(){
+        Intent intent = new Intent(this, Example2.class);
+        startActivity(intent);
+    }
+    public void startMainActivity(){
+        Intent intent = new Intent(Example1.this, MainActivity.class);
         startActivity(intent);
     }
 
