@@ -2,9 +2,13 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+<<<<<<< HEAD
+import android.os.Bundle;
+=======
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+>>>>>>> 3caceadeb9a749559e729c99c3ed1422c59a6fe3
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
+<<<<<<< HEAD
+=======
     private void startToast(String msg){
         Toast.makeText(this,msg, Toast.LENGTH_SHORT).show();
     }
@@ -22,4 +28,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+>>>>>>> 3caceadeb9a749559e729c99c3ed1422c59a6fe3
 }

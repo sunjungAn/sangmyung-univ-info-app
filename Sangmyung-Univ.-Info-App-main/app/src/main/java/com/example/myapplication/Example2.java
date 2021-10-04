@@ -3,7 +3,10 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
+=======
 import android.widget.Button;
+>>>>>>> 3caceadeb9a749559e729c99c3ed1422c59a6fe3
 import android.widget.EditText;
 import android.widget.Toast;
 
