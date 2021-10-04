@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Sangmyung-Univ.-Info-App-main/Sangmyung-Univ.-Info-App-main/app/src/main/res/layout/activity_example1.xml" value="0.12239583333333333" />
+=======
+        <entry key="..\:/Sangmyung-Univ.-Info-App-main/Sangmyung-Univ.-Info-App-main/app/src/main/res/layout/activity_example1.xml" value="0.144" />
+>>>>>>> 3caceadeb9a749559e729c99c3ed1422c59a6fe3
         <entry key="..\:/Sangmyung-Univ.-Info-App-main/Sangmyung-Univ.-Info-App-main/app/src/main/res/layout/activity_example2.xml" value="0.264" />
         <entry key="..\:/Sangmyung-Univ.-Info-App-main/Sangmyung-Univ.-Info-App-main/app/src/main/res/layout/activity_main.xml" value="0.12239583333333333" />
       </map>
