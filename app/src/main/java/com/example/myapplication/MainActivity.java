@@ -9,10 +9,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //adfsdf
+        setContentView(R.layout.dormitory_info);
+
     }
 }
-//배은기 테스트
-
-//권동균 테스트123123dfgfdgdgdg
