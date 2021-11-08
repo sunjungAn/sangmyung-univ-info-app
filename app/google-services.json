@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "871997690885",
+    "project_id": "sangmyung-univ-info-app",
+    "storage_bucket": "sangmyung-univ-info-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871997690885:android:b43749bab2cf292ac8f86c",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871997690885-9bpvbdtlr7bh8nlb25191bh01teg3r88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnn56jr8PPnsD0p2pSB8mSMLi64VeRT_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871997690885-9bpvbdtlr7bh8nlb25191bh01teg3r88.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
