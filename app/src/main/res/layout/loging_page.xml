@@ -133,7 +133,8 @@
                     android:textColor="#FFFFFF"
                     android:textSize="20dp"
                     android:layout_marginLeft ="100dp"
-                    android:background ="@drawable/rectangle"/>
+                    android:background ="@drawable/rectangle"
+                    android:id = "@+id/login_btn"/>
                 <Button
                     android:layout_marginTop="30dp"
                     android:layout_width="wrap_content"
