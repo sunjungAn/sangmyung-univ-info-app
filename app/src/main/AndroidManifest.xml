@@ -10,10 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+<<<<<<< HEAD
             android:name=".tablemap"
+=======
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LogingPageActivity"
+>>>>>>> 324a23172c28bf87d1f901359e34807383f2ca51
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
