@@ -46,19 +46,166 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="vertical">
             <TextView
+                android:id="@+id/user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="15dp"
                 android:text="User_Name"
+                android:textColor="#000000"
                 android:textSize="25dp"
-                android:id = "@+id/user_name"
-                android:textStyle="bold"
-                android:layout_margin="10dp"
-                android:textColor="#000000">
-            </TextView>
-        </LinearLayout>
+                android:textStyle="bold"></TextView>
 
+            <!--팔로우 팔로워 이미지 넣기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/user"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id = "@+id/num_of_post"
+                            android:text="123"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="40dp"
+                            android:textColor="#000000"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="\t\t\t\t\t\t"
+                            android:textColor="#000000"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:id = "@+id/num_of_follower"
+                            android:text="123"
+                            android:textColor="#000000"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\t\t\t\t\t\t"
+                            android:layout_gravity="bottom"
+                            android:textColor="#000000"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id = "@+id/num_of_following"
+                            android:layout_gravity="bottom"
+                            android:text="123"
+                            android:textColor="#000000"
+                            android:textSize="25dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="게시물"
+                            android:layout_marginLeft="35dp"
+                            android:textColor="#000000"
+                            android:textSize="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="\t\t\t\t"
+                            android:textColor="#000000"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="팔로워"
+                            android:textColor="#000000"
+                            android:textSize="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\t\t\t\t"
+                            android:textColor="#000000"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="팔로잉"
+                            android:textColor="#000000"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--자신 소개-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="컴퓨터과학과 19학번"
+                    android:id = "@+id/my_intro_main"
+                    android:textSize = "20dp"
+                    android:layout_marginLeft = "10dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="킹왕짱 컴퓨터과학과의 미래 "
+                    android:id = "@+id/my_intro"
+                    android:textSize = "20dp"
+                    android:layout_marginLeft = "10dp"
+                    android:textColor="#000000">
+                </TextView>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:text="프로필 편집"
+                    android:textStyle="bold"
+                    android:textColor = "#FFFFFF"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+        </LinearLayout>
 
     </LinearLayout>
 
