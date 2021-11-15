@@ -83,7 +83,7 @@ public class LogingPageActivity extends AppCompatActivity {
     }
 
     private void CompleteLogin(){
-        Intent intent = new Intent(this, tablemap.class);
+        Intent intent = new Intent(this, mypage.class);
         startActivity(intent);
     }
 
