@@ -42,7 +42,7 @@
             android:name=".SignupPageActivity"
             android:exported="true" />
         <activity
-            android:name=".FindUser"
+            android:name=".LogingPageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
