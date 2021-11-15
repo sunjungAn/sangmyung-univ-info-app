@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SignupPageActivity extends AppCompatActivity {
 
@@ -55,6 +56,7 @@ public class SignupPageActivity extends AppCompatActivity {
         String email = ((EditText)findViewById(R.id.signup_email)).getText().toString();
         String password = ((EditText)findViewById(R.id.signup_password)).getText().toString();
         String passwordCheck = ((EditText)findViewById(R.id.signup_passwordCheck)).getText().toString();
+        String name = ((EditText)findViewById(R.id.signUpUserName)).getText().toString();
         //비번 체크란 만들어야 돼요
         if(email.length() > 0 && password.length() > 0){
             if(password.equals(passwordCheck)) {
@@ -66,6 +68,8 @@ public class SignupPageActivity extends AppCompatActivity {
                                     Log.d(TAG, "createUserWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     startToast("회원가입이 완료되었습니다!");
+                                    String uid = user.getUid();
+                                    addUserInfo(name, uid);
                                     CompleteSignUp();
                                 } else {
                                     Log.w(TAG, "createUserWithEmail:failure", task.getException());
@@ -80,6 +84,17 @@ public class SignupPageActivity extends AppCompatActivity {
             startToast("이메일이나 비밀번호를 입력안하시면 어떡합니까...");
         }
     }
+
+    private void addUserInfo(String name, String uid){
+
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        memberInfo user = new memberInfo(name,"0", "0", "0");
+        db.collection("Users").document(uid).set(user);
+    }
+
+
+
     // 토스트 메세지를 표시하는 함수
     private void startToast(String msg){
         Toast.makeText(this,msg, Toast.LENGTH_SHORT).show();

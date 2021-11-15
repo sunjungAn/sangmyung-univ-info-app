@@ -6,6 +6,8 @@ public class memberInfo {
     private String studentID;
     private String major;
 
+    public memberInfo() {}
+
     public memberInfo(String name, String phoneNumber, String studentID, String major){
         this.name = name;
         this.phoneNumber = phoneNumber;
