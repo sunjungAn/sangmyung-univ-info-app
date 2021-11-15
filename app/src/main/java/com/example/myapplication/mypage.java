@@ -33,12 +33,6 @@ public class mypage extends AppCompatActivity {
             TextView userName = (TextView) findViewById(R.id.user_name);
             userName.setText(name);
         }
-
-
-
-
-
-
     }
 
 }

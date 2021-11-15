@@ -15,7 +15,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="<"
+            android:text="abc"
             android:layout_marginRight="300dp"/>
         <Button
             android:id="@+id/picture_btn"
@@ -348,7 +348,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/review_card"
-            card_view:CornerRadius="4dp"
+            card_view:cardCornerRadius="4dp"
             card_view:cardBackgroundColor="#D3D3D3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
