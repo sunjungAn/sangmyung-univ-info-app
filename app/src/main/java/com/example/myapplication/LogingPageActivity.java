@@ -62,8 +62,9 @@ public class LogingPageActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Log.d(TAG, "signInWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                startToast("로그인 완료!");
-                                Log.d(TAG, "bcdefg");
+                                String uid = mAuth.getCurrentUser().getUid();
+                                startToast(uid);
+                                Log.d(TAG, uid);
                                 CompleteLogin();
                             } else {
                                 // If sign in fails, display a message to the user.
