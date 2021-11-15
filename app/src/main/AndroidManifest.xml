@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +11,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".search"
+            android:exported="true" />
+        <activity
+            android:name=".ham_main"
+            android:exported="true" />
+        <activity
+            android:name=".write_review"
+            android:exported="true" />
+        <activity
+            android:name=".visited"
+            android:exported="true" />
+        <activity
+            android:name=".mypage"
+            android:exported="true" />
+        <activity
+            android:name=".myreview"
+            android:exported="true" />
+        <activity
+            android:name=".restaurant_info"
+            android:exported="true" />
+        <activity
+            android:name=".restaurant_list2"
+            android:exported="true" />
+        <activity
+            android:name=".restaurant_list"
+            android:exported="true" />
         <activity
             android:name=".SignupPageActivity"
             android:exported="true" />
@@ -25,7 +52,6 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".tablemap" />
-
     </application>
 
 </manifest>
