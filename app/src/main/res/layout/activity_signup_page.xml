@@ -94,6 +94,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="30dp"
+                    android:hint="PasswordCheck"
+                    android:textColor="#000000"
+                    android:textColorHint="#5A5A5A"
+                    android:textSize="25dp"
+                    android:id="@+id/signup_passwordCheck"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
                     android:hint="user name"
                     android:textColor="#000000"
                     android:textColorHint="#5A5A5A"

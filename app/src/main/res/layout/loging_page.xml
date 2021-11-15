@@ -99,7 +99,8 @@
                         android:layout_height="match_parent"
                         android:hint = "ID"
                         android:layout_marginLeft="40dp"
-                        android:layout_marginRight = "40dp">
+                        android:layout_marginRight = "40dp"
+                        android:id="@+id/loginId">
                     </EditText>
                 </LinearLayout>
                 <LinearLayout
@@ -114,7 +115,8 @@
                         android:layout_height="match_parent"
                         android:hint = "PASSWORD"
                         android:layout_marginLeft="40dp"
-                        android:layout_marginRight = "40dp">
+                        android:layout_marginRight = "40dp"
+                        android:id="@+id/loginPw">
                     </EditText>
                 </LinearLayout>
 

@@ -46,43 +46,47 @@ public class SignupPageActivity extends AppCompatActivity {
             switch(v.getId()){
                 case R.id.complete_signup:
                     signUp();
-                    CompleteSignUp();
                     break;
             }
         }
     };
 
     private void signUp() {
-
         String email = ((EditText)findViewById(R.id.signup_email)).getText().toString();
         String password = ((EditText)findViewById(R.id.signup_password)).getText().toString();
-
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            //UI  //updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            //idk what is this...Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
-                                    //idk too.....Toast.LENGTH_SHORT).show();
-                            // UI  //updateUI(null);
-                        }
-                    }
-                });
+        String passwordCheck = ((EditText)findViewById(R.id.signup_passwordCheck)).getText().toString();
+        //비번 체크란 만들어야 돼요
+        if(email.length() > 0 && password.length() > 0){
+            if(password.equals(passwordCheck)) {
+                mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    Log.d(TAG, "createUserWithEmail:success");
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    startToast("회원가입이 완료되었습니다!");
+                                    CompleteSignUp();
+                                } else {
+                                    Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                                    startToast("회원가입이 실패하였습니다...");
+                                }
+                            }
+                        });
+            }else{ //비번이 일치하지 않을 때
+                startToast("비밀번호가 일치하지 않습니다.");
+            }
+        }else{ //이메일이나 비번이 입력하지 않을 때
+            startToast("이메일이나 비밀번호를 입력안하시면 어떡합니까...");
+        }
     }
-
-
-
+    // 토스트 메세지를 표시하는 함수
+    private void startToast(String msg){
+        Toast.makeText(this,msg, Toast.LENGTH_SHORT).show();
+    }
 
     private void CompleteSignUp(){
         Intent intent = new Intent(this, LogingPageActivity.class);
         startActivity(intent);
-
     }
 }
