@@ -18,8 +18,9 @@
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/card"
             card_view:cardCornerRadius="15dp"
-            card_view:cardBackgroundColor="#CCCCCC"
+            card_view:cardBackgroundColor="#FFFFFF"
             android:layout_weight="7"
             android:layout_margin="15dp">
             <!-- 카드 안 영역 -->
@@ -41,6 +42,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="다음 수업은:"
+                        android:textColor="#1846A3"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:textSize="15dp"
@@ -48,6 +50,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#000000"
                         android:layout_weight="1"/>
 
                     <TextView
@@ -71,9 +74,10 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="너무나도 졸린 수업"
+                        android:textColor="#1846A3"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
-                        android:textSize="30dp"
+                        android:textSize="25dp"
                         android:textStyle="bold"/>
 
                     <LinearLayout
@@ -92,6 +96,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="123123123"
+                                android:textColor="#1846A3"
                                 android:layout_gravity="center"/>
                         </FrameLayout>
                     </LinearLayout>
@@ -109,6 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="29세이하 수강생은 수강불가"
+                        android:textColor="#1846A3"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:textSize="15dp"/>
