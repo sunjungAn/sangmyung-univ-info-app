@@ -3,6 +3,7 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -42,7 +43,7 @@
             android:name=".SignupPageActivity"
             android:exported="true" />
         <activity
-            android:name=".LogingPageActivity"
+            android:name=".MapActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,6 +54,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".tablemap" />
         <activity android:name=".FindUser" />
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="882cfa27de42cdaeba07d422cb28ab50"/>
     </application>
+
 
 </manifest>
