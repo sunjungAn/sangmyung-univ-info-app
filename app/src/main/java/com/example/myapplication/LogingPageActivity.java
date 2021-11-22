@@ -12,10 +12,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class LogingPageActivity extends AppCompatActivity {
 
@@ -63,9 +67,9 @@ public class LogingPageActivity extends AppCompatActivity {
                                 Log.d(TAG, "signInWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 String uid = mAuth.getCurrentUser().getUid();
+                                dbFunc.writeUid(uid);
+                                readData(uid);
                                 startToast(uid);
-                                Log.d(TAG, uid);
-                                CompleteLogin();
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "signInWithEmail:failure", task.getException());
@@ -82,8 +86,23 @@ public class LogingPageActivity extends AppCompatActivity {
         Toast.makeText(this,msg, Toast.LENGTH_SHORT).show();
     }
 
+    private void readData(String uid){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Log.d("checkfunc", "1");
+        final DocumentReference docRef = db.collection("Users").document(uid);
+        Log.d("checkfunc", "2");
+        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                dbFunc.member = documentSnapshot.toObject(memberInfo.class);
+                CompleteLogin();
+            }
+        });
+        Log.d("checkfunc", "4");
+    }
+
     private void CompleteLogin(){
-        Intent intent = new Intent(this, mypage.class);
+        Intent intent = new Intent(this, FindUser.class);
         startActivity(intent);
     }
 

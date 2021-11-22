@@ -196,7 +196,17 @@
                     android:text="프로필 편집"
                     android:textStyle="bold"
                     android:textColor = "#FFFFFF"
-                    android:layout_margin="10dp" />
+                    android:layout_margin="10dp"
+                    android:id="@+id/editProfile"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:text="로그 아웃"
+                    android:textStyle="bold"
+                    android:textColor = "#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:id="@+id/mypageLogout"/>
             </LinearLayout>
 
         </LinearLayout>

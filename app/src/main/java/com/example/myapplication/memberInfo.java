@@ -8,6 +8,13 @@ public class memberInfo {
 
     public memberInfo() {}
 
+    public memberInfo(boolean a){
+        this.name = "NoData";
+        this.phoneNumber = "NoData";
+        this.studentID = "NoData";
+        this.major = "NoData";
+    }
+
     public memberInfo(String name, String phoneNumber, String studentID, String major){
         this.name = name;
         this.phoneNumber = phoneNumber;

@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,13 +10,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class FindUserAdapter extends BaseAdapter {
+public class memberInfoAdapter extends BaseAdapter {
 
     Context mContext = null;
-    ArrayList<memberInfo> mData = null;
+    ArrayList<Users> mData = null;
     LayoutInflater mLayoutInflater = null;
 
-    public FindUserAdapter(Context context, ArrayList<memberInfo> data) {
+    public memberInfoAdapter(Context context, ArrayList<Users> data) {
         mContext = context;
         mData = data;
         mLayoutInflater = LayoutInflater.from((mContext));
@@ -31,7 +30,7 @@ public class FindUserAdapter extends BaseAdapter {
         return position;
     }
 
-    public memberInfo getItem(int position) {
+    public Users getItem(int position) {
         return mData.get(position);
     }
 
@@ -42,9 +41,9 @@ public class FindUserAdapter extends BaseAdapter {
 
         TextView user_name = (TextView) itemLayout.findViewById(R.id.find_user_name);
         TextView user_text = (TextView) itemLayout.findViewById(R.id.find_user_text);
-        Log.d("pst", String.valueOf(mData.get(position)));
-        user_name.setText(mData.get(position).getName());
-        user_text.setText(mData.get(position).getStudentID());
+
+        user_name.setText(mData.get(position).mUserName);
+        user_text.setText(mData.get(position).mtext);
         return itemLayout;
     }
 }

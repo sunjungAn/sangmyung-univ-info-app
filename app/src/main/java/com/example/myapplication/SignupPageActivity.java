@@ -68,9 +68,8 @@ public class SignupPageActivity extends AppCompatActivity {
                                     Log.d(TAG, "createUserWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     startToast("회원가입이 완료되었습니다!");
-                                    String uid = user.getUid();
-                                    addUserInfo(name, uid);
-                                    CompleteSignUp();
+                                    dbFunc.onlyAddName(user.getUid(), name);
+                                    //CompleteSignUp();
                                 } else {
                                     Log.w(TAG, "createUserWithEmail:failure", task.getException());
                                     startToast("회원가입이 실패하였습니다...");
@@ -86,8 +85,6 @@ public class SignupPageActivity extends AppCompatActivity {
     }
 
     private void addUserInfo(String name, String uid){
-
-
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         memberInfo user = new memberInfo(name,"0", "0", "0");
         db.collection("Users").document(uid).set(user);
