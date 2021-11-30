@@ -28,10 +28,25 @@ public class mypage extends AppCompatActivity {
 
     static final String TAG = "myPageActivity";
 
+    TextView follower;
+    TextView following;
+    TextView followerInt;
+    TextView followingInt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage);
+
+        findViewById(R.id.mypageLogout).setOnClickListener(onClickListener);
+        follower = (TextView) findViewById(R.id.followerStr);
+        follower.setOnClickListener(onClickListener);
+        following = (TextView) findViewById(R.id.followingStr);
+        following.setOnClickListener(onClickListener);
+        followerInt = (TextView) findViewById(R.id.num_of_follower);
+        followerInt.setOnClickListener(onClickListener);
+        followingInt = (TextView) findViewById(R.id.num_of_following);
+        followerInt.setOnClickListener(onClickListener);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user == null){
@@ -44,9 +59,7 @@ public class mypage extends AppCompatActivity {
             }
             if(dbFunc.member == null){
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
-                Log.d("checkfunc", "1");
                 final DocumentReference docRef = db.collection("Users").document(dbFunc.uid);
-                Log.d("checkfunc", "2");
                 docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -57,8 +70,6 @@ public class mypage extends AppCompatActivity {
                 Log.d("checkfunc", "4");
             }else{ profileShow(); }
         }
-
-        findViewById(R.id.mypageLogout).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener(){
@@ -71,6 +82,14 @@ public class mypage extends AppCompatActivity {
                     Log.d("logout", "logout done");
                     CompleteSignUp();
                     break;
+                case R.id.followerStr:
+                case R.id.num_of_follower:
+                    followerFindUser();
+                    break;
+                case R.id.followingStr:
+                case R.id.num_of_following:
+                    followingFindUser();
+                    break;
             }
         }
     };
@@ -78,16 +97,17 @@ public class mypage extends AppCompatActivity {
     private void profileShow(){
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        Log.d("showFunc", "will get");
         memberInfo userObject = dbFunc.backinfo();
-        Log.d("showFunc", "geted");
-        Log.d("tryfunc", dbFunc.uid);
         TextView nameText = (TextView) findViewById(R.id.user_name);
+        TextView majorText = (TextView) findViewById(R.id.my_intro_main);
+        TextView erNum = (TextView) findViewById(R.id.num_of_follower);
+        TextView ingNum = (TextView) findViewById(R.id.num_of_following);
         if(userObject != null){
-            Log.d("func", userObject.getName());
             nameText.setText(userObject.getName());
+            majorText.setText(userObject.getMajor());
+            erNum.setText(String.valueOf(userObject.getFollowerNum()));
+            ingNum.setText(String.valueOf(userObject.getFollowingNum()));
         }else{
-            Log.d("showFunc", "what");
         }
 
 
@@ -109,6 +129,16 @@ public class mypage extends AppCompatActivity {
 
     private void CompleteSignUp(){
         Intent intent = new Intent(this, LogingPageActivity.class);
+        startActivity(intent);
+    }
+    private void followerFindUser(){
+        Intent intent = new Intent(this, FindUser.class);
+        intent.putExtra("where", 1); //1은 follower
+        startActivity(intent);
+    }
+    private void followingFindUser(){
+        Intent intent = new Intent(this, FindUser.class);
+        intent.putExtra("where", 2); //2는 following
         startActivity(intent);
     }
 }

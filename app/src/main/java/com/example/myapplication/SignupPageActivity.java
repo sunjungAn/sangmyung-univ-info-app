@@ -86,7 +86,7 @@ public class SignupPageActivity extends AppCompatActivity {
 
     private void addUserInfo(String name, String uid){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        memberInfo user = new memberInfo(name,"0", "0", "0");
+        memberInfo user = new memberInfo(name,"0", "0", "0", 0, 0);
         db.collection("Users").document(uid).set(user);
     }
 

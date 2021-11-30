@@ -11,13 +11,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class FindUserAdapter extends BaseAdapter {
+public class FindSimpleAdapter extends BaseAdapter {
 
     Context mContext = null;
-    ArrayList<memberInfo> mData = null;
+    ArrayList<simpleUserInfo> mData = null;
     LayoutInflater mLayoutInflater = null;
 
-    public FindUserAdapter(Context context, ArrayList<memberInfo> data) {
+    public FindSimpleAdapter(Context context, ArrayList<simpleUserInfo> data) {
         mContext = context;
         mData = data;
         mLayoutInflater = LayoutInflater.from((mContext));
@@ -31,7 +31,7 @@ public class FindUserAdapter extends BaseAdapter {
         return position;
     }
 
-    public memberInfo getItem(int position) {
+    public simpleUserInfo getItem(int position) {
         return mData.get(position);
     }
 
@@ -42,11 +42,8 @@ public class FindUserAdapter extends BaseAdapter {
 
         TextView user_name = (TextView) itemLayout.findViewById(R.id.find_user_name);
         TextView user_text = (TextView) itemLayout.findViewById(R.id.find_user_text);
-        Log.d("pst", String.valueOf(mData.get(position)));
         user_name.setText(mData.get(position).getName());
-        Log.d("find", String.valueOf(user_name));
-        user_text.setText(mData.get(position).getStudentID());
-        Log.d("find", String.valueOf(user_text));
+        user_text.setText(mData.get(position).getMajor());
         return itemLayout;
     }
 }

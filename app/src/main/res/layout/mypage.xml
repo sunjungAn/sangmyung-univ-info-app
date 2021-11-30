@@ -147,7 +147,8 @@
                             android:layout_height="wrap_content"
                             android:text="팔로워"
                             android:textColor="#000000"
-                            android:textSize="20dp"/>
+                            android:textSize="20dp"
+                            android:id="@+id/followerStr"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -159,7 +160,8 @@
                             android:layout_height="wrap_content"
                             android:text="팔로잉"
                             android:textColor="#000000"
-                            android:textSize="20dp"/>
+                            android:textSize="20dp"
+                            android:id="@+id/followingStr"/>
                     </LinearLayout>
                 </LinearLayout>
 

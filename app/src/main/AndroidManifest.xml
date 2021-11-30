@@ -15,6 +15,8 @@
         <activity
             android:name=".search"
             android:exported="true" />
+        <activity android:name=".LogingPageActivity"
+            android:exported="true"/>
         <activity
             android:name=".ham_main"
             android:exported="true" />
@@ -25,7 +27,7 @@
             android:name=".visited"
             android:exported="true" />
         <activity
-            android:name=".mypage"
+            android:name=".MapActivity"
             android:exported="true" />
         <activity
             android:name=".myreview"
@@ -43,7 +45,7 @@
             android:name=".SignupPageActivity"
             android:exported="true" />
         <activity
-            android:name=".MapActivity"
+            android:name=".mypage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

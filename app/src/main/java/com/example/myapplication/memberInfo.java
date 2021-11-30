@@ -5,6 +5,8 @@ public class memberInfo {
     private String phoneNumber;
     private String studentID;
     private String major;
+    private int followerNum;
+    private int followingNum;
 
     public memberInfo() {}
 
@@ -13,6 +15,8 @@ public class memberInfo {
         this.phoneNumber = "NoData";
         this.studentID = "NoData";
         this.major = "NoData";
+        this.followerNum = 0;
+        this.followingNum = 0;
     }
 
     public memberInfo(String name, String phoneNumber, String studentID, String major){
@@ -20,6 +24,17 @@ public class memberInfo {
         this.phoneNumber = phoneNumber;
         this.studentID = studentID;
         this.major = major;
+        this.followerNum = 0;
+        this.followingNum = 0;
+    }
+
+    public memberInfo(String name, String phoneNumber, String studentID, String major, int followerNum, int followingNum){
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.studentID = studentID;
+        this.major = major;
+        this.followerNum = followerNum;
+        this.followingNum = followingNum;
     }
 
     public String getName(){
@@ -53,5 +68,19 @@ public class memberInfo {
     public void setMajor(String major){
         this.major = major;
     }
+
+    public void setFollowerNum(int followerNum){
+        this.followerNum = followerNum;
+    }
+
+    public int getFollowerNum(){ return this.followerNum;}
+
+    public void setFollowingNum(int followingNum){
+        this.followingNum = followingNum;
+    }
+
+    public int getFollowingNum(){ return this.followingNum;}
+
+
 
 }

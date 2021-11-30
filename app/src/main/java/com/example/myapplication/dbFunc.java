@@ -22,7 +22,7 @@ public class dbFunc {
 
     public static void onlyAddName(String uid, String name){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        memberInfo user = new memberInfo(name,"0", "0", "0");
+        memberInfo user = new memberInfo(name,"0", "0", "0", 0, 0);
         db.collection("Users").document(uid).set(user);
 
     }
@@ -31,27 +31,18 @@ public class dbFunc {
 
     public static void writeMemberObject(String uid){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        Log.d("checkfunc", "1");
         DocumentReference docRef = db.collection("Users").document(uid);
-        Log.d("checkfunc", "2");
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                Log.d("checkfunc", "3");
                 member = documentSnapshot.toObject(memberInfo.class);
                 a = 1;
-                Log.d("inFunc","inobiect");
-                Log.d("inFunc", String.valueOf(a));
-                Log.d("func", "infowrited");
             }
         });
-        Log.d("checkfunc", "4");
-        Log.d("inFunc", String.valueOf(a));
     }
 
     public static void writeUid(String loginUid){
         uid = loginUid;
-        Log.d("func","uidwrited");
     }
 
     public static memberInfo backinfo(){
