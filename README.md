@@ -29,9 +29,9 @@ android studio와 firebase의 전반적인 지식을 쌓기 위해 진행한 toy
 
 
 ## 그 외 산출물
-### 중간 발표 ppt
-### 최종 발표 ppt 
-### 활동 보고서
+### [중간 발표 ppt](https://github.com/sunjungAn/Sangmyung-Univ.-Info-App/blob/master/%EC%82%B0%EC%B6%9C%EB%AC%BC/%EC%83%81%EC%83%9D%ED%94%8C%EB%9F%AC%EC%8A%A4-PPT%20(1).pptx)
+### [학교 대표 팀 프로젝트 우수사례 발표 ppt](https://github.com/sunjungAn/Sangmyung-Univ.-Info-App/blob/master/%EC%82%B0%EC%B6%9C%EB%AC%BC/%EC%98%A4%EB%A6%84-%EA%B5%90%EC%9C%A1-%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C-%EB%B0%9C%ED%91%9C.pptx) 
+### [활동 보고서](https://github.com/sunjungAn/Sangmyung-Univ.-Info-App/blob/master/%EC%82%B0%EC%B6%9C%EB%AC%BC/%ED%99%9C%EB%8F%99%EB%B3%B4%EA%B3%A0%EC%84%9C%20%EC%B7%A8%ED%95%A9%EB%B3%B8%20%26%20%EC%B6%9C%EC%84%9D%EB%B6%80.pdf)
 ### [결과 보고서](https://github.com/sunjungAn/Sangmyung-Univ.-Info-App/blob/master/%EC%82%B0%EC%B6%9C%EB%AC%BC/2021-2%20%EC%8A%A4%ED%84%B0%EB%94%94%EC%83%81%EC%83%9D%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EA%B2%B0%EA%B3%BC%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf)
 ### 결선 최종보고서
 ### 결선 동영상
@@ -41,3 +41,7 @@ android studio와 firebase의 전반적인 지식을 쌓기 위해 진행한 toy
 > 박권배팀으로 상생플러스 본선 진출
 
 학교 대표 팀 프로젝트 우수사례로 채택
+> [기사1](http://www.veritas-a.com/news/articleView.html?idxno=399458)
+> [기사2](https://www.smu.ac.kr/webzine/today.do?mode=view&articleNo=722534&article.offset=0&articleLimit=10)
+
+http://www.veritas-a.com/news/articleView.html?idxno=399458)
