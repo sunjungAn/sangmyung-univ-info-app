@@ -32,7 +32,7 @@ android studio와 firebase의 전반적인 지식을 쌓기 위해 진행한 toy
 ### 중간 발표 ppt
 ### 최종 발표 ppt 
 ### 활동 보고서
-### 결과 보고서
+### [결과 보고서](https://github.com/sunjungAn/Sangmyung-Univ.-Info-App/blob/master/%EC%82%B0%EC%B6%9C%EB%AC%BC/2021-2%20%EC%8A%A4%ED%84%B0%EB%94%94%EC%83%81%EC%83%9D%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EA%B2%B0%EA%B3%BC%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf)
 ### 결선 최종보고서
 ### 결선 동영상
 
