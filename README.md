@@ -41,7 +41,7 @@ android studio와 firebase의 전반적인 지식을 쌓기 위해 진행한 toy
 > 박권배팀으로 상생플러스 본선 진출
 
 학교 대표 팀 프로젝트 우수사례로 채택
-> [기사1](http://www.veritas-a.com/news/articleView.html?idxno=399458)
-> [기사2](https://www.smu.ac.kr/webzine/today.do?mode=view&articleNo=722534&article.offset=0&articleLimit=10)
+> [(교외)veritas 기사](http://www.veritas-a.com/news/articleView.html?idxno=399458)
+> 
+> [(교내)상명대학교 웹진](https://www.smu.ac.kr/webzine/today.do?mode=view&articleNo=722534&article.offset=0&articleLimit=10)
 
-http://www.veritas-a.com/news/articleView.html?idxno=399458)
