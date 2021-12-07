@@ -1,7 +1,6 @@
 # Sangmyung-Univ.-Info-App
 2021 Sangmyung Univ. information application (2021-2 상생플러스 부문 참가)
 
-2021 Android Studio 멘토링
 
 ## 상명대학교 정보 제공 애플리케이션
 
